@@ -13,7 +13,7 @@
 /*
  * Vendor
  */
-/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 /*
  *  Corrects `block` display not defined in IE 8/9.
  */
@@ -354,12 +354,12 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf, .content.watch .tags, .content.watch .tags .share {
+.cf, .content.watch .tags, .content.watch .tags .share, .content.watch .tags .sponsors {
   zoom: 1; }
-  .cf:before, .content.watch .tags:before, .content.watch .tags .share:before, .cf:after, .content.watch .tags:after, .content.watch .tags .share:after {
+  .cf:before, .content.watch .tags:before, .content.watch .tags .share:before, .content.watch .tags .sponsors:before, .cf:after, .content.watch .tags:after, .content.watch .tags .share:after, .content.watch .tags .sponsors:after {
     content: " ";
     display: table; }
-  .cf:after, .content.watch .tags:after, .content.watch .tags .share:after {
+  .cf:after, .content.watch .tags:after, .content.watch .tags .share:after, .content.watch .tags .sponsors:after {
     clear: both; }
 
 /* 
@@ -537,6 +537,43 @@ video {
   margin: 0 auto; }
   .content a {
     color: #43ac74; }
+  .content span.msg {
+    font-size: 18px;
+    font-size: 1.2rem;
+    line-height: 1.27778;
+    border: 2px solid #43ac74;
+    padding: 5px 10px;
+    margin-bottom: 1em;
+    display: inline-block;
+    border-radius: 5px;
+    color: #43ac74; }
+  .content input {
+    font-size: 20px;
+    font-size: 1.33333rem;
+    line-height: 1.15;
+    border: 2px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none; }
+    .content input::-webkit-input-placeholder {
+      color: #ccc; }
+    .content input:-moz-placeholder {
+      color: #ccc; }
+    .content input:focus {
+      border-color: #999; }
+  .content button {
+    font-size: 20px;
+    font-size: 1.33333rem;
+    line-height: 1.15;
+    border: 2px solid #43ac74;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-left: .5em;
+    color: #43ac74; }
+    .content button:hover {
+      border-color: #999;
+      color: #999; }
 
 /*
  * Content: Index
@@ -581,12 +618,12 @@ video {
         line-height: 1.4375;
         line-height: 1.4em;
         color: #999999;
-        font-weight: 500;
+        font-weight: 400;
         margin-top: 1em; }
       .content.make ol li .download {
-        font-size: 14px;
-        font-size: 0.93333rem;
-        line-height: 1.64286;
+        font-size: 13px;
+        font-size: 0.86667rem;
+        line-height: 1.76923;
         -webkit-border-radius: 6px;
         -moz-border-radius: 6px;
         -ms-border-radius: 6px;
@@ -611,6 +648,14 @@ video {
           color: #f9f9f9; }
         .content.make ol li .download svg {
           display: none; }
+      .content.make ol li .download.windows {
+        border: 3px solid #999;
+        color: #999;
+        margin: 1em 0 .1em 0; }
+        .content.make ol li .download.windows:hover {
+          background-color: transparent;
+          color: #999;
+          cursor: default; }
     .content.make ol li:last-child {
       border: 0; }
 
@@ -699,12 +744,21 @@ video {
       display: inline-block;
       color: #f9f9f9;
       float: left; }
-    .content.watch .tags .share {
+    .content.watch .tags .share, .content.watch .tags .sponsors {
       display: block;
       float: none;
       clear: both;
       padding-top: 2em;
       text-align: left; }
+    .content.watch .tags .sponsors {
+      float: left; }
+      .content.watch .tags .sponsors h3 {
+        float: left; }
+      .content.watch .tags .sponsors a {
+        clear: both;
+        float: left;
+        padding: 0;
+        margin: 0; }
     .content.watch .tags h3 {
       font-size: 15px;
       font-size: 1rem;
@@ -783,6 +837,60 @@ video {
         background-size: 20px auto;
         background-repeat: no-repeat; }
       .content.watch .tags a.embed span:hover {
+        border-color: #bbb;
+        background-color: #f8f8f8;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#d9d9d9));
+        background-image: -moz-linear-gradient(top, #f8f8f8, #d9d9d9);
+        background-image: -o-linear-gradient(top, #f8f8f8, #d9d9d9);
+        background-image: -ms-linear-gradient(top, #f8f8f8, #d9d9d9);
+        background-image: linear-gradient(top, #f8f8f8, #d9d9d9);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
+    .content.watch .tags a.mixture span {
+      font-size: 12px;
+      font-size: 0.8rem;
+      line-height: 1.91667;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+      font-family: 'Helvetica Neue',Arial,sans-serif;
+      background-color: #f8f8f8;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#dedede));
+      background-image: -moz-linear-gradient(top, white, #dedede);
+      background-image: -o-linear-gradient(top, white, #dedede);
+      background-image: -ms-linear-gradient(top, white, #dedede);
+      background-image: linear-gradient(top, white, #dedede);
+      border: #ccc solid 1px;
+      color: #333;
+      font-weight: bold;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      overflow: hidden;
+      padding: .1em .4em 0 2.5em;
+      text-decoration: none;
+      display: inline-block;
+      clear: both;
+      position: relative; }
+      .content.watch .tags a.mixture span:after {
+        content: '';
+        position: absolute;
+        top: .25em;
+        bottom: 0;
+        left: .4em;
+        min-height: 100%;
+        width: 30px;
+        background-image: url("../img/mixture.png");
+        background-size: 20px auto;
+        background-repeat: no-repeat; }
+      .content.watch .tags a.mixture span:hover {
         border-color: #bbb;
         background-color: #f8f8f8;
         background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#d9d9d9));
@@ -936,16 +1044,16 @@ video {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     border-radius: 4px;
-    font-size: 13px;
-    font-size: 0.86667rem;
-    line-height: 1.76923;
+    font-size: 12px;
+    font-size: 0.8rem;
+    line-height: 1.91667;
     text-transform: uppercase;
     text-decoration: none;
-    line-height: 1.2em;
+    line-height: 1.3em;
     margin-right: .5em;
     background-color: #c1c0b7;
     background-color: rgba(0, 0, 0, 0.3);
-    padding: .3em .7em;
+    padding: .3em .4em;
     display: inline-block; }
     .page-foot a:hover {
       background-color: #999999; }

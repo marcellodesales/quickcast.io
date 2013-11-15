@@ -28,17 +28,18 @@ n[e].height=t/" + ratio.toFixed(2) + "+'px'}}n(),window.onresize=n,window.addEve
 		var video_width = $("video").attr("data-width");
 		var video_height = $("video").attr("data-height");
 		var ratio = parseFloat(video_width/video_height);
+		var ratioHeight = parseFloat(video_height/video_width);
 
 		var video_class_width = $(".video").width();
 
-		var quotes = [ 
+		/*var quotes = [ 
 			'It\'s all about speed. Hot, nasty, badass speed &mdash; Will Ferell',
 			'Life moves pretty fast. If you don\'t stop and look around once in a while, you could miss it &mdash; Ferris Bueller',
 			'I\'m too fast. I\'m too smart. I\'m too pretty &mdash; Muhammed Ali',
 			'Speed, it seems to me, provides the one genuinely modern pleasure &mdash; Aldous Huxley'
 		];
 
-		$("body.loading div.loader p").html(quotes[Math.floor(Math.random()*quotes.length)]);
+		$("body.loading div.loader p").html(quotes[Math.floor(Math.random()*quotes.length)]);*/
 
 		// Add controls to mobile version and then return before quickcast player added
 		// for now on mobile devices we just serve the standard html5 player
@@ -87,7 +88,8 @@ n[e].height=t/" + ratio.toFixed(2) + "+'px'}}n(),window.onresize=n,window.addEve
 
 			$vid.load();
 
-			setTimeout(function() { $("body").removeClass("loading"); }, 2500);
+			/*setTimeout(function() { $("body").removeClass("loading"); }, 2500);*/
+			$("body").removeClass("loading");
 
 			$vid.addEventListener('loadeddata', function() {
 
@@ -261,6 +263,21 @@ n[e].height=t/" + ratio.toFixed(2) + "+'px'}}n(),window.onresize=n,window.addEve
 					var buttonPos = (updProgWidth-$that.find('.progress-button').width());
 					if (buttonPos < 0) buttonPos = 0;
 					$that.find('.progress-button').css({'left' : buttonPos+'px'});
+
+					var $ht = $(window).height();
+
+					if ($("video").height() > $(window).height())
+					{
+						$("video").css("max-width", ($ht / ratioHeight.toFixed(0)).toFixed(0))
+							.css("max-height", $ht);
+						$(".video").css("width", ($ht / ratioHeight.toFixed(0)).toFixed(0))
+							.css("max-height", $ht);
+					}
+					else
+					{
+						$("video").css("max-width", sizes).css("max-height", "auto");
+						$(".video").css("width", "auto").css("max-height", "auto");
+					}
 
 					bufferLength();
 				}

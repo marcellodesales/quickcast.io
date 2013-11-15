@@ -280,6 +280,8 @@
       				}*/ }
       .content.make ol li .download .txt {
         display: block; }
+    .content.make ol li .download.windows {
+      top: 5em; }
     .content.make ol li img {
       width: 10em;
       position: absolute;
@@ -347,6 +349,12 @@
         clear: both;
         padding-top: 1em;
         text-align: right; }
+      .content.watch .tags .sponsors {
+        float: right; }
+        .content.watch .tags .sponsors h3 {
+          float: right; }
+        .content.watch .tags .sponsors a {
+          float: right; }
       .content.watch .tags h3 {
         font-size: 18px;
         font-size: 1.2rem;
@@ -390,7 +398,17 @@
     font-size: 18px;
     font-size: 1.2rem;
     line-height: 1.27778;
-    line-height: 1.6em; } }
+    line-height: 1.6em; }
+
+  /*
+   * Footer
+   */
+  .page-foot a {
+    font-size: 13px;
+    font-size: 0.86667rem;
+    line-height: 1.76923;
+    line-height: 1.2em;
+    padding: .3em .7em; } }
 /*
  * Breakpoint 64.37
  */

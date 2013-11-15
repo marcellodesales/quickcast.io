@@ -116,6 +116,10 @@
 				}
 			}
 
+			.download.windows{
+				top:5em;
+			}
+
 			img{
 				width:10em;
 				position:absolute;
@@ -195,6 +199,18 @@
 			text-align:right;
 		}
 
+		.sponsors{
+			float:right;
+
+			h3{
+				float:right;
+			}
+
+			a{
+				float:right;
+			}
+		}
+
 		h3{
 			@include font-size(18px);
 			line-height:1.3em;
@@ -249,5 +265,18 @@
 			@include font-size(18px);
 			line-height:1.6em;
 		}
+	}
+}
+
+
+
+/*
+ * Footer
+ */
+.page-foot{
+	a{
+		@include font-size(13px);
+		line-height:1.2em;
+		padding:.3em .7em;
 	}
 }
